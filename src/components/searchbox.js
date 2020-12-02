@@ -11,10 +11,8 @@ class SearchBox extends Component {
 
         this.state = {
             churches: [],
-            currentChurch: null,
             currentIndex: -1,
             searchChurch: ''
-
         };
     }
 
@@ -60,7 +58,7 @@ class SearchBox extends Component {
     }
 
     render() {
-        const { searchChurch, churches, currentChurch, currentIndex } = this.state;
+        const { searchChurch, churches, currentIndex } = this.state;
         return (
             <div id='churchsearch-display'>
                 <input
@@ -89,7 +87,7 @@ class SearchBox extends Component {
                                 {church.Denomination}<br></br>
                                 <a
                                     className='church-links'
-                                    href={church.Web_URL} target='_blank'>{church.Web_URL} </a>
+                                    href={church.Web_URL}>{church.Web_URL} </a>
                             </li>
                         ))}
                     </ul>
